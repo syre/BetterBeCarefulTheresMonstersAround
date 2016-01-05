@@ -1,7 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 4ea780d3a0fdef548970438fb7f4cb84
-timeCreated: 1451937663
+timeCreated: 1452029166
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,13 +8,6 @@ TextureImporter:
     21300002: hero_ranger_1
     21300004: hero_ranger_2
     21300006: hero_ranger_3
-=======
-guid: 9f8613666575bef439661bfca2ace5b3
-timeCreated: 1451989849
-licenseType: Free
-TextureImporter:
-  fileIDToRecycleName: {}
->>>>>>> 0a9dde6b97c38598bffd878dfb35c0a49b3df46e
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,11 +30,7 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-<<<<<<< HEAD
   textureFormat: -3
-=======
-  textureFormat: -1
->>>>>>> 0a9dde6b97c38598bffd878dfb35c0a49b3df46e
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
@@ -54,11 +42,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> 0a9dde6b97c38598bffd878dfb35c0a49b3df46e
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,7 +53,6 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-<<<<<<< HEAD
     sprites:
     - name: hero_ranger_0
       rect:
@@ -115,9 +98,6 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-=======
-    sprites: []
->>>>>>> 0a9dde6b97c38598bffd878dfb35c0a49b3df46e
     outline: []
   spritePackingTag: 
   userData: 
