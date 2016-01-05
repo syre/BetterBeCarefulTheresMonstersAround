@@ -24,12 +24,16 @@ public class MonsterWander : MonoBehaviour {
         var hit = Physics2D.Linecast(monster.position, target.position);
         if (hit && hit.distance < range)
 		{
-                Debug.Log(hit.distance);
-                seenEnemy = true;
-                if (monster.position.x > target.position.x)
-                    direction = -1;
-                else
-                    direction = 1;
+            if (!seenEnemy)
+            {
+                enemyFound();
+            }
+            Debug.Log("distance to player: "+hit.distance);
+            seenEnemy = true;
+            if (monster.position.x > target.position.x)
+                direction = -1;
+            else
+                direction = 1;
 		}
 		else
 		{
@@ -41,6 +45,15 @@ public class MonsterWander : MonoBehaviour {
 		monster.rotation = Quaternion.AngleAxis(angle, Vector3.down);
 
 	}
+
+    void enemyFound()
+    {
+        Vector3 statusPos = monster.transform.position;
+        statusPos.y += 1;
+        var status = Instantiate(Resources.Load("StatusIcons/exclamation_mark"), statusPos, Quaternion.identity) as GameObject;
+        status.transform.parent = monster;
+        Destroy(status, 2);
+    }
 
 	IEnumerator newDirection()
 	{
