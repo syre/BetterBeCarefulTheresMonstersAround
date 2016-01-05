@@ -63,11 +63,11 @@ public class NecroMovement : MonoBehaviour
         }
         if (Input.GetButton("Jump"))
         {
-           // if (isgrounded)
-          //  {
+            if (isgrounded)
+            {
                 rigid.velocity = new Vector2(rigid.velocity.x, jumpingSpeed);
                 animator.SetBool("isJumping", true);
-         //   }
+            }
         }
 
         if (currentSprintPool >= sprintPool)
