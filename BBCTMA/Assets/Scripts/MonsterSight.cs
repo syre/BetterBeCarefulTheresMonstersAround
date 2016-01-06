@@ -3,16 +3,23 @@ using System.Collections;
 
 public class MonsterSight : MonoBehaviour {
 
+    public delegate void onFirstTimeSeenDelegate();
+
     private float range;
     private bool seenEnemy;
     private Transform monster;
     private Transform target;
+    private Animator animator;
+    private onFirstTimeSeenDelegate onFirstTimeSeen;
 
-    public MonsterSight(float range, Transform monster, Transform target)
+    // Use this for initialization
+    public void init(float range, Transform monster, Transform target, Animator animator, onFirstTimeSeenDelegate _onFirstTimeSeen)
     {
         this.range = range;
         this.monster = monster;
         this.target = target;
+        this.animator = animator;
+        this.onFirstTimeSeen = _onFirstTimeSeen;
         seenEnemy = false;
     }
 
@@ -24,9 +31,10 @@ public class MonsterSight : MonoBehaviour {
             Debug.DrawLine(monster.position, hit.point);
             Debug.Log("distance to player: " + hit.distance);
 
+            // on first time seeing enemy
             if (!seenEnemy)
             {
-                enemyFound();
+                onInitialEnemyFound();
             }
             seenEnemy = true;
         }
@@ -37,7 +45,17 @@ public class MonsterSight : MonoBehaviour {
         return seenEnemy;
     }
 
-    public void enemyFound()
+
+    public void onInitialEnemyFound()
+    {
+        // run delegate from MonsterWander
+        onFirstTimeSeen();
+
+        createDiscoverStatus();
+
+    }
+
+    public void createDiscoverStatus()
     {
         Vector3 statusPos = monster.transform.position;
         statusPos.y += 1;
