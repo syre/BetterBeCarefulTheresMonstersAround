@@ -1,71 +1,58 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Monster sight.
+/// Right now needs "Ignore raycast" layer on enemy to work
+/// </summary>
 public class MonsterSight : MonoBehaviour {
+    
+    public bool seenEnemy = false;
+    public float range = 3f;
+    public Vector2 lastSighting = new Vector2(10f, 10f);
 
-    public delegate void onFirstTimeSeenDelegate();
-
-    private float range;
-    private bool seenEnemy;
-    private Transform monster;
-    private Transform target;
-    private Animator animator;
-    private onFirstTimeSeenDelegate onFirstTimeSeen;
+    private GameObject player;
+    private Animator monsterAnimator;
+    private Animator playerAnimator;
 
     // Use this for initialization
-    public void init(float range, Transform monster, Transform target, Animator animator, onFirstTimeSeenDelegate _onFirstTimeSeen)
+    void Awake()
     {
-        this.range = range;
-        this.monster = monster;
-        this.target = target;
-        this.animator = animator;
-        this.onFirstTimeSeen = _onFirstTimeSeen;
-        seenEnemy = false;
+        player = GameObject.FindGameObjectWithTag("Player");
+        monsterAnimator = gameObject.GetComponent<Animator>();
+        playerAnimator = player.GetComponent<Animator>();
     }
 
-    public bool isEnemyInSight()
+    void Update()
     {
-        var hit = Physics2D.Linecast(monster.position, target.position);
-        if (hit && hit.distance < range)
-        {
-            Debug.DrawLine(monster.position, hit.point);
-            Debug.Log("distance to player: " + hit.distance);
+        
+    }
 
-            // on first time seeing enemy
-            if (!seenEnemy)
-            {
-                onInitialEnemyFound();
-            }
-            seenEnemy = true;
-        }
-        else
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject == player)
         {
             seenEnemy = false;
+            if (Physics2D.Raycast(transform.position, player.transform.position))
+            {
+                seenEnemy = true;
+                lastSighting = player.transform.position;
+
+                onInitialEnemyFound();
+            }
         }
-        return seenEnemy;
+        
     }
-
-
     public void onInitialEnemyFound()
     {
-        // run delegate from MonsterWander
-        onFirstTimeSeen();
-
         createDiscoverStatus();
-
     }
 
     public void createDiscoverStatus()
     {
-        Vector3 statusPos = monster.transform.position;
+        Vector2 statusPos = gameObject.transform.position;
         statusPos.y += 1;
         var status = Instantiate(Resources.Load("StatusIcons/exclamation_mark"), statusPos, Quaternion.identity) as GameObject;
-        status.transform.parent = monster;
+        status.transform.parent = gameObject.transform;
         Destroy(status, 2);
-    }
-
-    public bool hasRecentlySeenEnemy()
-    {
-        return seenEnemy;
     }
 }
