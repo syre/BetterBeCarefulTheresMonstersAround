@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: a0f8e6233cf6b0a43ad211e4bbd33520
+timeCreated: 1452024885
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: LizardMan_0
+    21300002: LizardMan_1
+    21300004: LizardMan_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: LizardMan_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 237
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 62.62857, y: 6}
+        - {x: 93.62857, y: 29}
+        - {x: 116.62857, y: 36}
+        - {x: 116.62857, y: 102}
+        - {x: 113.62857, y: 123}
+        - {x: 71.62857, y: 138}
+        - {x: -16.37143, y: 138}
+        - {x: -79.37143, y: 96}
+        - {x: -91.37143, y: -12}
+        - {x: -97.37143, y: -63}
+        - {x: -115.37143, y: -105}
+        - {x: -115.37143, y: -138}
+        - {x: 81.62857, y: -138}
+        - {x: 81.62857, y: -134}
+        - {x: 87.62857, y: -112}
+        - {x: 75.62857, y: -55}
+    - name: LizardMan_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 240
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 97.69998, y: 67}
+        - {x: 95.69998, y: 62}
+        - {x: 91.69998, y: 65}
+        - {x: 88.69998, y: 65}
+        - {x: 85.69998, y: 62}
+        - {x: 84.69998, y: 59}
+        - {x: 78.69998, y: 59}
+        - {x: 84.69998, y: 61}
+        - {x: 85.69998, y: 64}
+        - {x: 86.69998, y: 68}
+        - {x: 89.69998, y: 65}
+        - {x: 93.69998, y: 65}
+        - {x: 95.69998, y: 67}
+        - {x: 105.69998, y: 68}
+        - {x: 107.69998, y: 70}
+        - {x: 115.69998, y: 85}
+        - {x: 117.69998, y: 91}
+        - {x: 117.69998, y: 103}
+        - {x: 63.69998, y: 138}
+        - {x: -31.300018, y: 138}
+        - {x: -99.30002, y: 98}
+        - {x: -117.30002, y: -40}
+        - {x: -117.30002, y: -138}
+        - {x: 106.69998, y: -138}
+        - {x: 117.69998, y: -85}
+        - {x: 117.69998, y: 54}
+        - {x: 103.69998, y: 67}
+    - name: LizardMan_2
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 0
+        width: 273
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 126.77142, y: -20}
+        - {x: 132.77142, y: 31}
+        - {x: 134.77142, y: 43}
+        - {x: 134.77142, y: 93}
+        - {x: 132.77142, y: 113}
+        - {x: 78.77142, y: 139}
+        - {x: -18.228577, y: 139}
+        - {x: -38.228577, y: 135}
+        - {x: -109.22858, y: 20}
+        - {x: -128.22858, y: -9}
+        - {x: -87.22858, y: -13}
+        - {x: -107.22858, y: -61}
+        - {x: -133.22858, y: -127}
+        - {x: -133.22858, y: -139}
+        - {x: 66.77142, y: -139}
+        - {x: 67.77142, y: -100}
+        - {x: 52.771423, y: -44}
+        - {x: 62.771423, y: 3}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
