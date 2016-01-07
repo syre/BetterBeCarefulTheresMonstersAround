@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4ea780d3a0fdef548970438fb7f4cb84
-timeCreated: 1452029166
+timeCreated: 1452156796
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,8 @@ TextureImporter:
     21300002: hero_ranger_1
     21300004: hero_ranger_2
     21300006: hero_ranger_3
+    21300008: hero_ranger_4
+    21300010: hero_ranger_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,47 +59,121 @@ TextureImporter:
     - name: hero_ranger_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 9
         y: 0
-        width: 20
-        height: 32
+        width: 42
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 13, y: 30.5}
+        - {x: -21, y: 30.5}
+        - {x: -21, y: -26.5}
+        - {x: -15, y: -30.5}
+        - {x: 18, y: -30.5}
+        - {x: 21, y: -26.5}
+        - {x: 21, y: 25.5}
     - name: hero_ranger_1
       rect:
         serializedVersion: 2
-        x: 37
+        x: 73
         y: 0
-        width: 20
-        height: 32
+        width: 48
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 24, y: -28}
+        - {x: 24, y: -14}
+        - {x: 14, y: 23}
+        - {x: 8, y: 30}
+        - {x: -24, y: 30}
+        - {x: -24, y: -25}
+        - {x: -17, y: -30}
+        - {x: 0, y: -30}
+        - {x: 2, y: -28}
+        - {x: 8, y: -30}
+        - {x: 22, y: -30}
     - name: hero_ranger_2
       rect:
         serializedVersion: 2
-        x: 69
+        x: 137
         y: 0
-        width: 20
-        height: 32
+        width: 42
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 9, y: 30.5}
+        - {x: -16, y: 30.5}
+        - {x: -21, y: 29.5}
+        - {x: -21, y: -24.5}
+        - {x: -13, y: -30.5}
+        - {x: 21, y: -30.5}
+        - {x: 21, y: 16.5}
+        - {x: 18, y: 24.5}
     - name: hero_ranger_3
       rect:
         serializedVersion: 2
-        x: 101
+        x: 201
         y: 0
-        width: 20
-        height: 32
+        width: 42
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 13, y: 30.5}
+        - {x: -21, y: 30.5}
+        - {x: -21, y: -26.5}
+        - {x: -15, y: -30.5}
+        - {x: 18, y: -30.5}
+        - {x: 21, y: -26.5}
+        - {x: 21, y: 25.5}
+    - name: hero_ranger_4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -28}
+        - {x: 24, y: -14}
+        - {x: 14, y: 23}
+        - {x: 8, y: 30}
+        - {x: -24, y: 30}
+        - {x: -24, y: -25}
+        - {x: -17, y: -30}
+        - {x: 0, y: -30}
+        - {x: 2, y: -28}
+        - {x: 8, y: -30}
+        - {x: 22, y: -30}
+    - name: hero_ranger_5
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 0
+        width: 42
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 30.5}
+        - {x: -16, y: 30.5}
+        - {x: -21, y: 29.5}
+        - {x: -21, y: -24.5}
+        - {x: -13, y: -30.5}
+        - {x: 21, y: -30.5}
+        - {x: 21, y: 16.5}
+        - {x: 18, y: 24.5}
     outline: []
   spritePackingTag: 
   userData: 
