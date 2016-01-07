@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4ea780d3a0fdef548970438fb7f4cb84
-timeCreated: 1452156796
+timeCreated: 1452158514
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,121 +59,113 @@ TextureImporter:
     - name: hero_ranger_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 0
         y: 0
-        width: 42
-        height: 61
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 13, y: 30.5}
-        - {x: -21, y: 30.5}
-        - {x: -21, y: -26.5}
-        - {x: -15, y: -30.5}
-        - {x: 18, y: -30.5}
-        - {x: 21, y: -26.5}
-        - {x: 21, y: 25.5}
+      - - {x: -25, y: 31}
+        - {x: -25, y: -32}
+        - {x: 18, y: -32}
+        - {x: 21, y: -23}
+        - {x: 21, y: 24}
+        - {x: 16, y: 31}
     - name: hero_ranger_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 64
         y: 0
-        width: 48
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 24, y: -28}
-        - {x: 24, y: -14}
-        - {x: 14, y: 23}
-        - {x: 8, y: 30}
-        - {x: -24, y: 30}
-        - {x: -24, y: -25}
-        - {x: -17, y: -30}
-        - {x: 0, y: -30}
-        - {x: 2, y: -28}
-        - {x: 8, y: -30}
-        - {x: 22, y: -30}
+      - - {x: -13, y: 30}
+        - {x: -25, y: 25}
+        - {x: -25, y: -23}
+        - {x: -16, y: -32}
+        - {x: 27, y: -32}
+        - {x: 27, y: 0}
+        - {x: 18, y: 23}
+        - {x: 5, y: 30}
     - name: hero_ranger_2
       rect:
         serializedVersion: 2
-        x: 137
+        x: 128
         y: 0
-        width: 42
-        height: 61
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 9, y: 30.5}
-        - {x: -16, y: 30.5}
-        - {x: -21, y: 29.5}
-        - {x: -21, y: -24.5}
-        - {x: -13, y: -30.5}
-        - {x: 21, y: -30.5}
-        - {x: 21, y: 16.5}
-        - {x: 18, y: 24.5}
+      - - {x: 5, y: 31}
+        - {x: -19, y: 31}
+        - {x: -25, y: 27}
+        - {x: -25, y: -25}
+        - {x: -16, y: -32}
+        - {x: 21, y: -32}
+        - {x: 21, y: 5}
+        - {x: 17, y: 23}
     - name: hero_ranger_3
       rect:
         serializedVersion: 2
-        x: 201
+        x: 192
         y: 0
-        width: 42
-        height: 61
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 13, y: 30.5}
-        - {x: -21, y: 30.5}
-        - {x: -21, y: -26.5}
-        - {x: -15, y: -30.5}
-        - {x: 18, y: -30.5}
-        - {x: 21, y: -26.5}
-        - {x: 21, y: 25.5}
+      - - {x: -25, y: 31}
+        - {x: -25, y: -32}
+        - {x: 18, y: -32}
+        - {x: 21, y: -23}
+        - {x: 21, y: 24}
+        - {x: 16, y: 31}
     - name: hero_ranger_4
       rect:
         serializedVersion: 2
-        x: 265
+        x: 256
         y: 0
-        width: 48
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 24, y: -28}
-        - {x: 24, y: -14}
-        - {x: 14, y: 23}
-        - {x: 8, y: 30}
-        - {x: -24, y: 30}
-        - {x: -24, y: -25}
-        - {x: -17, y: -30}
-        - {x: 0, y: -30}
-        - {x: 2, y: -28}
-        - {x: 8, y: -30}
-        - {x: 22, y: -30}
+      - - {x: -13, y: 30}
+        - {x: -25, y: 25}
+        - {x: -25, y: -23}
+        - {x: -16, y: -32}
+        - {x: 27, y: -32}
+        - {x: 27, y: 0}
+        - {x: 18, y: 23}
+        - {x: 5, y: 30}
     - name: hero_ranger_5
       rect:
         serializedVersion: 2
-        x: 329
+        x: 320
         y: 0
-        width: 42
-        height: 61
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 9, y: 30.5}
-        - {x: -16, y: 30.5}
-        - {x: -21, y: 29.5}
-        - {x: -21, y: -24.5}
-        - {x: -13, y: -30.5}
-        - {x: 21, y: -30.5}
-        - {x: 21, y: 16.5}
-        - {x: 18, y: 24.5}
+      - - {x: 5, y: 31}
+        - {x: -19, y: 31}
+        - {x: -25, y: 27}
+        - {x: -25, y: -25}
+        - {x: -16, y: -32}
+        - {x: 21, y: -32}
+        - {x: 21, y: 5}
+        - {x: 17, y: 23}
     outline: []
   spritePackingTag: 
   userData: 
