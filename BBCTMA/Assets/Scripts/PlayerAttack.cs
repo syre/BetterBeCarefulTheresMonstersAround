@@ -5,6 +5,8 @@ public class PlayerAttack : MonoBehaviour {
     public float attackTimer = 0f;
     public float attackWaitTime = 1.5f;
 	public GameObject projectile;
+    public int destroyAfterSeconds = 10;
+
 	private Animator playerAnimator;
 
 	// Use this for initialization
@@ -43,9 +45,9 @@ public class PlayerAttack : MonoBehaviour {
         var projectileCopy = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
 
         var flightScript = projectileCopy.GetComponent<ProjectileFlight>();
-        flightScript.velocity = 10f;
         flightScript.direction = mouseDirection;
-        Destroy(projectileCopy, 10);
+        
+        Destroy(projectileCopy, destroyAfterSeconds);
    }
      
 }
