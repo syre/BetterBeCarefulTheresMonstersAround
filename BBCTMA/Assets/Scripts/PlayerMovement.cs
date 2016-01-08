@@ -31,23 +31,30 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButton ("Horizontal")) {
-			player.localScale = new Vector3(Input.GetAxisRaw ("Horizontal")*scaleX, player.localScale.y, player.localScale.z);
-			if (Input.GetButton ("Sprint")) {
-				if (currentSprintPool >= sprintLoss) {
-					rigid.velocity = new Vector2 (Input.GetAxis ("Horizontal") * sprintSpeed, rigid.velocity.y);
-					animator.SetBool ("isSprinting", true);
-					animator.SetBool ("isWalking", false);
-					currentSprintPool -= sprintLoss;
+			//quick fix for now possible staying
+			if (Input.GetAxisRaw ("Horizontal") != 0) {
+				player.localScale = new Vector3 (Input.GetAxisRaw ("Horizontal") * scaleX, player.localScale.y, player.localScale.z);
+				if (Input.GetButton ("Sprint")) {
+					if (currentSprintPool >= sprintLoss) {
+						rigid.velocity = new Vector2 (Input.GetAxis ("Horizontal") * sprintSpeed, rigid.velocity.y);
+						animator.SetBool ("isSprinting", true);
+						animator.SetBool ("isWalking", false);
+						currentSprintPool -= sprintLoss;
+					} else {
+						rigid.velocity = new Vector2 (Input.GetAxis ("Horizontal") * movementSpeed, rigid.velocity.y);
+						animator.SetBool ("isSprinting", false);
+						animator.SetBool ("isWalking", true);
+					}
 				} else {
 					rigid.velocity = new Vector2 (Input.GetAxis ("Horizontal") * movementSpeed, rigid.velocity.y);
 					animator.SetBool ("isSprinting", false);
 					animator.SetBool ("isWalking", true);
 				}
 			} else {
-				rigid.velocity = new Vector2 (Input.GetAxis ("Horizontal") * movementSpeed, rigid.velocity.y);
 				animator.SetBool ("isSprinting", false);
-				animator.SetBool ("isWalking", true);
+				animator.SetBool ("isWalking", false);
 			}
+
 		} else {
 			animator.SetBool ("isSprinting", false);
 			animator.SetBool ("isWalking", false);
