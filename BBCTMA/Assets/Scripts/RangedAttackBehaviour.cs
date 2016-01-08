@@ -43,19 +43,13 @@ public class RangedAttackBehaviour : MonoBehaviour {
                 if (player.transform.position.x + player.transform.localScale.x < GetComponent<Transform>().position.x)
                 {
 					Vector3 dir = player.position - GetComponent<Transform> ().position;
-					//Quaternion look = Quaternion.LookRotation (dir); 
-					//, new Vector3(GetComponent<Transform>().position.x - GetComponent<Transform>().localScale.x, GetComponent<Transform>().position.y, GetComponent<Transform>().position.z), GetComponent<Transform>().rotation
 					GameObject fireBall = Instantiate(attack, new Vector3 (GetComponent<Transform> ().position.x - scaleX, GetComponent<Transform> ().position.y + yUp, GetComponent<Transform> ().position.z), Quaternion.identity) as GameObject;
-					//fireBall.transform.position = new Vector3 (GetComponent<Transform> ().position.x - scaleX, GetComponent<Transform> ().position.y + yUp, GetComponent<Transform> ().position.z);
-					fireBall.GetComponent<ProjectileHitPlayer> ().setVelocity (projectileSpeed,dir);//new Vector2(-projectileSpeed, 0f));
+					fireBall.GetComponent<ProjectileHitPlayer> ().setVelocity (projectileSpeed,dir);
                 }
                 else
                 {
 					Vector3 dir = GetComponent<Transform> ().position - player.position;
-					//Quaternion look = Quaternion.LookRotation (dir); 
-					//, new Vector3(GetComponent<Transform>().position.x + GetComponent<Transform>().localScale.x, GetComponent<Transform>().position.y, GetComponent<Transform>().position.z), GetComponent<Transform>().rotation
 					GameObject fireBall = GameObject.Instantiate(attack, new Vector3 (GetComponent<Transform> ().position.x + scaleX, GetComponent<Transform> ().position.y + yUp, GetComponent<Transform> ().position.z), Quaternion.identity) as GameObject;
-					//fireBall.transform.position = new Vector3 (GetComponent<Transform> ().position.x + scaleX, GetComponent<Transform> ().position.y + yUp, GetComponent<Transform> ().position.z);
 					fireBall.GetComponent<ProjectileHitPlayer>().setVelocity(projectileSpeed,dir);
                 }
                 nextFire = Time.time + timeBetweenAttack;
