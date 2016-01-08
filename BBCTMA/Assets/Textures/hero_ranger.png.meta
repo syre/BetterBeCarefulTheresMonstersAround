@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4ea780d3a0fdef548970438fb7f4cb84
-timeCreated: 1452158514
+timeCreated: 1452174284
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,7 @@ TextureImporter:
     21300006: hero_ranger_3
     21300008: hero_ranger_4
     21300010: hero_ranger_5
+    21300012: hero_ranger_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -84,14 +85,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -13, y: 30}
-        - {x: -25, y: 25}
-        - {x: -25, y: -23}
-        - {x: -16, y: -32}
-        - {x: 27, y: -32}
-        - {x: 27, y: 0}
+      - - {x: 14, y: 30}
+        - {x: -25, y: 30}
+        - {x: -25, y: -32}
+        - {x: 25, y: -32}
+        - {x: 27, y: -30}
+        - {x: 27, y: -16}
         - {x: 18, y: 23}
-        - {x: 5, y: 30}
     - name: hero_ranger_2
       rect:
         serializedVersion: 2
@@ -166,6 +166,26 @@ TextureImporter:
         - {x: 21, y: -32}
         - {x: 21, y: 5}
         - {x: 17, y: 23}
+    - name: hero_ranger_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 31}
+        - {x: -19, y: 16}
+        - {x: -25, y: -12}
+        - {x: -25, y: -30}
+        - {x: -24, y: -32}
+        - {x: 23, y: -32}
+        - {x: 32, y: -29}
+        - {x: 32, y: 16}
+        - {x: 5, y: 31}
     outline: []
   spritePackingTag: 
   userData: 

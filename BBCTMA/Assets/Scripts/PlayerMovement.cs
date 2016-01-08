@@ -65,11 +65,7 @@ public class PlayerMovement : MonoBehaviour {
 			currentSprintPool += sprintGain;
 		}
 
-		if (Input.GetButton ("Attack")) {
-			animator.SetBool ("isAttacking", true);
-		} else {
-			animator.SetBool ("isAttacking", false);
-		}
+
 	}
 
 

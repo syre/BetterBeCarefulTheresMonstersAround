@@ -72,7 +72,6 @@ public class MonsterWander : MonoBehaviour {
         Vector2 sightingDelta = sight.lastSighting - currentPosition;
         if (sightingDelta.sqrMagnitude > 4f)
         {
-            Debug.Log("destination now last sighting");
             destination = sight.lastSighting;
         }
 

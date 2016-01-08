@@ -33,10 +33,9 @@ public class MonsterSight : MonoBehaviour {
         {
             seenEnemy = false;
             // get direction by subtraction player position from monster position
-            var playerDirection = player.transform.position - transform.position;
+            var playerDirection = (player.transform.position - transform.position).normalized;
             var hit = Physics2D.Raycast(transform.position, playerDirection);
             Debug.DrawLine(transform.position, hit.point);
-            Debug.Log(hit.collider.gameObject);
             if (hit.collider.gameObject == player) 
             {
                 seenEnemy = true;
