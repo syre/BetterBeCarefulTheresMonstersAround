@@ -26,6 +26,7 @@ public class ProjectileFlight : MonoBehaviour {
             Debug.Log("Collided with Monsters non trigger collider!");
             var healthScript = other.gameObject.GetComponent<MonsterHealth>();
             healthScript.takeDamage(damage);
+			Destroy (gameObject);
         }
     }
 }

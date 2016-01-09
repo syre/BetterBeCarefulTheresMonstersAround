@@ -1,47 +1,81 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+public enum itemSlot 
+{
+    HEADPIECE,
+    WEAPON,
+    CHESTPIECE,
+    LEGPIECE,
+    BOOTS
+}
 public class Inventory : MonoBehaviour {
 
-    public GameObject[] itemSlots = new GameObject[4];
+    public Item headPiece;
+    public Item weapon;
+    public Item chestPiece;
+    public Item legPiece;
+    public Item boots;
+
 	// Use this for initialization
 	void Start () {
-	
+        headPiece = ScriptableObject.CreateInstance("Item") as Item;
+        weapon = ScriptableObject.CreateInstance("Item") as Item;
+        chestPiece = ScriptableObject.CreateInstance("Item") as Item;
+        legPiece = ScriptableObject.CreateInstance("Item") as Item;
+        boots = ScriptableObject.CreateInstance("Item") as Item;
+
+        headPiece.init(itemSlot.HEADPIECE, Resources.Load<Sprite>("ItemImages/basic_hood"));
+        weapon.init(itemSlot.WEAPON, Resources.Load<Sprite>("ItemImages/sword"));
+        chestPiece.init(itemSlot.CHESTPIECE, Resources.Load<Sprite>("ItemImages/basic_chest"));
+        legPiece.init(itemSlot.LEGPIECE, Resources.Load<Sprite>("ItemImages/basic_legs"));
+        boots.init(itemSlot.BOOTS, Resources.Load<Sprite>("ItemImages/basic_boots"));
 	}
 	
-	// Update is called once per frame
-    public bool addItem(GameObject item)
+    public void addItem(Item item, itemSlot slot)
     {
-        for (int i = 0; i < itemSlots.Length; i++)
+        switch(slot)
         {
-            if (itemSlots[i] == null)
-            {
-                itemSlots[i] = item;
-                return true;
-            }
+            case itemSlot.HEADPIECE:
+                headPiece = item;
+                break;
+            case itemSlot.WEAPON:
+                weapon = item;
+                break;
+            case itemSlot.CHESTPIECE:
+                chestPiece = item;
+                break;
+            case itemSlot.LEGPIECE:
+                legPiece = item;
+                break;
+            case itemSlot.BOOTS:
+                boots = item;
+                break;
+            default:
+                break;
         }
-
-        return false;
     }
 
-    public void dropItem(GameObject item)
+    public void dropItem(itemSlot slot)
     {
-        for (int i = 0; i < itemSlots.Length; i++)
+        switch(slot)
         {
-            if (itemSlots[i] == item)
-            {
-                Debug.Log("item dropped");
-                itemSlots[i] = null;
-            }
-            
+            case itemSlot.HEADPIECE:
+                Destroy(headPiece);
+                break;
+            case itemSlot.WEAPON:
+                Destroy(weapon);
+                break;
+            case itemSlot.CHESTPIECE:
+                Destroy(chestPiece);
+                break;
+            case itemSlot.LEGPIECE:
+                Destroy(legPiece);
+                break;
+            case itemSlot.BOOTS:
+                Destroy(boots);
+                break;
+            default:
+                break;
         }
-        Debug.Log("could not find item to drop");
-    }
-    public void dropItem(int index)
-    {
-        if (itemSlots[index] != null)
-            itemSlots[index] = null;
-        else
-            Debug.Log("no item in slot "+index);
     }
 }
