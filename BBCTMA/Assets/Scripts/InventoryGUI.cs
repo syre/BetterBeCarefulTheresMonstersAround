@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections;
 
-public class InventoryGUI : MonoBehaviour {
+public class InventoryGUI : MonoBehaviour, IPointerEnterHandler {
 
     public GameObject headPieceButton;
     public GameObject weaponButton;
@@ -25,8 +26,13 @@ public class InventoryGUI : MonoBehaviour {
         legPieceButton.GetComponent<Image>().sprite = inventory.legPiece.sprite;
         bootsButton.GetComponent<Image>().sprite = inventory.boots.sprite;
     }
+
+    public void OnPointerEnter(PointerEventData data)
+    {
+        Debug.Log("pointer entered");
+    }
 	
-	// Update is called once per frame
+    // Update is called once per frame
 	void Update() 
     {
 		if (Input.GetButtonDown("Inventory")) 
