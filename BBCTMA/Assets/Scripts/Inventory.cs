@@ -24,11 +24,11 @@ public class Inventory : MonoBehaviour {
         legPiece = ScriptableObject.CreateInstance("Item") as Item;
         boots = ScriptableObject.CreateInstance("Item") as Item;
 
-        headPiece.init(itemSlot.HEADPIECE, Resources.Load<Sprite>("ItemImages/basic_hood"));
-        weapon.init(itemSlot.WEAPON, Resources.Load<Sprite>("ItemImages/sword"));
-        chestPiece.init(itemSlot.CHESTPIECE, Resources.Load<Sprite>("ItemImages/basic_chest"));
-        legPiece.init(itemSlot.LEGPIECE, Resources.Load<Sprite>("ItemImages/basic_legs"));
-        boots.init(itemSlot.BOOTS, Resources.Load<Sprite>("ItemImages/basic_boots"));
+        headPiece.init(itemSlot.HEADPIECE, Resources.Load<Sprite>("ItemImages/basic_hood"), "Basic Headpiece");
+        weapon.init(itemSlot.WEAPON, Resources.Load<Sprite>("ItemImages/sword"), "Basic Sword");
+        chestPiece.init(itemSlot.CHESTPIECE, Resources.Load<Sprite>("ItemImages/basic_chest"), "Basic Chestpiece");
+        legPiece.init(itemSlot.LEGPIECE, Resources.Load<Sprite>("ItemImages/basic_legs"), "Basic Legpiece");
+        boots.init(itemSlot.BOOTS, Resources.Load<Sprite>("ItemImages/basic_boots"), "Basic Boots");
 	}
 	
     public void addItem(Item item, itemSlot slot)

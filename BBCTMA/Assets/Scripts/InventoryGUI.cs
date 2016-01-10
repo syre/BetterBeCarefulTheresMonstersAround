@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class InventoryGUI : MonoBehaviour, IPointerEnterHandler {
+public class InventoryGUI : MonoBehaviour {
 
     public GameObject headPieceButton;
     public GameObject weaponButton;
@@ -27,10 +27,6 @@ public class InventoryGUI : MonoBehaviour, IPointerEnterHandler {
         bootsButton.GetComponent<Image>().sprite = inventory.boots.sprite;
     }
 
-    public void OnPointerEnter(PointerEventData data)
-    {
-        Debug.Log("pointer entered");
-    }
 	
     // Update is called once per frame
 	void Update() 
