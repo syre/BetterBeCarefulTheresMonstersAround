@@ -18,11 +18,10 @@ public class onHoverGUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerEnter(PointerEventData data)
     {
-        if (hoverOverText)
-            return;
+		Debug.Log ("OnPointerEnter called");
         hoverOverText = Instantiate(Resources.Load("UIElements/HoverOverText"), Vector2.one, Quaternion.identity) as GameObject;
         hoverOverText.transform.SetParent(inventoryPanel.transform, false);
-        hoverOverText.transform.position = transform.position;
+        hoverOverText.transform.position = transform.position + new Vector3(2f,0f,0f);
         switch(name)
         {
             case "HeadpieceButton":
@@ -47,6 +46,7 @@ public class onHoverGUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerExit(PointerEventData data)
     {
+			Debug.Log("OnPointerExit called");
             Destroy(hoverOverText);
     }
 
