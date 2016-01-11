@@ -4,7 +4,6 @@ using System.Collections;
 public class MonsterWander : MonoBehaviour {
 	public float movementSpeed = 3f;
 	public Transform target;
-    public Vector2 resetPosition = new Vector2(10f, 10f);
     public Transform[] waypoints;
 
     private float direction = 1f;
@@ -34,7 +33,7 @@ public class MonsterWander : MonoBehaviour {
         {
             // Attack
         }
-        else if (sight.lastSighting != resetPosition)
+        else if (sight.lastSighting != sight.resetPosition)
         {
             chaseEnemy();
         }
@@ -77,10 +76,16 @@ public class MonsterWander : MonoBehaviour {
 
         if (Vector2.Distance(transform.position, destination) < stoppingDistance)
         {
+            if (chaseTimer == 0f)
+            {
+                sight.onInitialEnemyFound();
+                animator.SetBool("isEnemyDiscovered", true);
+            }
             chaseTimer += Time.deltaTime;
+            animator.SetBool("isEnemyDiscovered", false);
             if (chaseTimer > chaseWaitTime)
             {
-                sight.lastSighting = resetPosition;
+                sight.lastSighting = sight.resetPosition;
                 chaseTimer = 0f;
             }
         }
@@ -92,7 +97,7 @@ public class MonsterWander : MonoBehaviour {
 
     void patrol()
     {
-        if (destination == resetPosition || Vector2.Distance(transform.position, destination) < stoppingDistance)
+        if (destination == sight.resetPosition || Vector2.Distance(transform.position, destination) < stoppingDistance)
         {
             patrolTimer += Time.deltaTime;
             if (patrolTimer >= patrolWaitTime)
