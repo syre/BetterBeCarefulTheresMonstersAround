@@ -8,7 +8,8 @@ public class MonsterSight : MonoBehaviour {
     
     public bool seenEnemy = false;
     public float range = 3f;
-    public Vector2 lastSighting = new Vector2(10f, 10f);
+    public Vector2 resetPosition = new Vector2(10f, 10f);
+    public Vector2 lastSighting;
 
     private GameObject player;
     private Animator monsterAnimator;
@@ -20,6 +21,7 @@ public class MonsterSight : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         monsterAnimator = gameObject.GetComponent<Animator>();
         playerAnimator = player.GetComponent<Animator>();
+        lastSighting = resetPosition;
     }
 
     void Update()
@@ -36,12 +38,10 @@ public class MonsterSight : MonoBehaviour {
             var playerDirection = (player.transform.position - transform.position).normalized;
             var hit = Physics2D.Raycast(transform.position, playerDirection);
             Debug.DrawLine(transform.position, hit.point);
-            if (hit.collider.gameObject == player) 
+            if (hit.collider.gameObject == player)
             {
                 seenEnemy = true;
                 lastSighting = player.transform.position;
-
-                onInitialEnemyFound();
             }
         }
         
