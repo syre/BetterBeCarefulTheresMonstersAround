@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
-
-    public float health = 100;
+    public float maxhealth = 100f;
+    public float health = 100f;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +18,17 @@ public class PlayerHealth : MonoBehaviour {
         }
 	}
 
+
+
     public void takeDamage(int damage){
         health -= damage;
+    }
+
+    public void addHealthPoints(float hp)
+    {
+        if (health + hp > maxhealth)
+            health = maxhealth;
+        else
+            health += hp;
     }
 }
