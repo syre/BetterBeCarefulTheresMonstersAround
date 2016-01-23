@@ -14,7 +14,7 @@ public class ProjectileHitPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		GetComponent<Rigidbody2D>().velocity =  dir * velocity;
-        Debug.Log("ARE WE HERE");
+        //Debug.Log("ARE WE HERE");
 	}
 
 

@@ -29,11 +29,11 @@ public class RangedAttackBehaviour : MonoBehaviour {
 			GetComponent<Transform> ().localScale = new Vector3 (scaleX, GetComponent<Transform> ().localScale.y, GetComponent<Transform> ().localScale.z);
 		}
 		if (Vector3.Distance(GetComponent<Transform>().position, player.position) < agroRange) {
-			Debug.Log ("Distance is: " + Vector3.Distance(GetComponent<Transform>().position, player.position));
+			//Debug.Log ("Distance is: " + Vector3.Distance(GetComponent<Transform>().position, player.position));
 			isAttacking = true;
 		} else {
 			isAttacking = false;
-			Debug.Log ("Distance is: " + Vector3.Distance(GetComponent<Transform>().position, player.position));
+			//Debug.Log ("Distance is: " + Vector3.Distance(GetComponent<Transform>().position, player.position));
 		}
         if (isAttacking)
         {
