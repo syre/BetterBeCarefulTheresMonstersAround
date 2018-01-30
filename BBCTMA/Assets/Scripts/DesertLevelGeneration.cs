@@ -45,7 +45,7 @@ public class DesertLevelGeneration : MonoBehaviour {
     public void InsertPrefab()
     {
         // randomize a prefab from array
-        int prefabIndex = UnityEngine.Random.Range(0, prefabs.Length);
+        int prefabIndex = Random.Range(0, prefabs.Length);
         GameObject g = Instantiate(prefabs[prefabIndex]);
         // Set position of generated prefab
         g.transform.localPosition = nextPosition;
